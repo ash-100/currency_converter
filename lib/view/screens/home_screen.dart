@@ -1,4 +1,5 @@
 import 'package:currency_converter/constants.dart';
+import 'package:currency_converter/view/screens/white_input_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -69,6 +70,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(color: primaryColor, fontSize: 20),
                   ),
                   InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => WhiteInputScreen()));
+                    },
                     child: Text(
                       '100',
                       style: TextStyle(color: primaryColor, fontSize: 120),
