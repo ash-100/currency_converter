@@ -1,4 +1,5 @@
 import 'package:currency_converter/constants.dart';
+import 'package:currency_converter/view/screens/red_input_screen.dart';
 import 'package:currency_converter/view/screens/white_input_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -42,6 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RedInputScreen()));
+                  },
                   child: Text(
                     '100',
                     style: TextStyle(color: Colors.white, fontSize: 120),

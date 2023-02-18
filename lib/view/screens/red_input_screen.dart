@@ -3,20 +3,21 @@ import 'dart:math';
 import 'package:currency_converter/constants.dart';
 import 'package:flutter/material.dart';
 
-class WhiteInputScreen extends StatefulWidget {
-  const WhiteInputScreen({super.key});
+class RedInputScreen extends StatefulWidget {
+  const RedInputScreen({super.key});
 
   @override
-  State<WhiteInputScreen> createState() => _WhiteInputScreenState();
+  State<RedInputScreen> createState() => _RedInputScreenState();
 }
 
-class _WhiteInputScreenState extends State<WhiteInputScreen> {
+class _RedInputScreenState extends State<RedInputScreen> {
   var curr_input = 0.0;
   bool decimal = false;
   int c = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFEC5759),
       body: Container(
         margin: EdgeInsets.all(16),
         padding: EdgeInsets.all(16),
@@ -42,7 +43,7 @@ class _WhiteInputScreenState extends State<WhiteInputScreen> {
             Center(
                 child: Text(
               curr_input.toString(),
-              style: TextStyle(fontSize: 100, color: Color(0xFFFC1514)),
+              style: TextStyle(fontSize: 100, color: Colors.white),
             )),
             Spacer(),
             numberRow(1, 2, 3),
@@ -84,7 +85,7 @@ class _WhiteInputScreenState extends State<WhiteInputScreen> {
           height: 80,
           width: 80,
           decoration: BoxDecoration(
-            color: Color(0xFFFFB6B6),
+            color: Color(0xFFB73434),
             borderRadius: BorderRadius.circular(40),
           ),
           child: Center(
@@ -104,7 +105,7 @@ class _WhiteInputScreenState extends State<WhiteInputScreen> {
           height: 80,
           width: 80,
           decoration: BoxDecoration(
-            color: Color(0xFFFFB6B6),
+            color: Color(0xFFB73434),
             borderRadius: BorderRadius.circular(40),
           ),
           child: Center(
@@ -122,13 +123,13 @@ class _WhiteInputScreenState extends State<WhiteInputScreen> {
           height: 80,
           width: 80,
           decoration: BoxDecoration(
-            color: Color(0xFFFC1514),
+            color: Colors.white,
             borderRadius: BorderRadius.circular(40),
           ),
           child: Center(
               child: Icon(
             Icons.check,
-            color: Colors.white,
+            color: Color(0xFFFC1514),
             size: 25,
           )),
         )
@@ -145,7 +146,7 @@ class _WhiteInputScreenState extends State<WhiteInputScreen> {
         height: 80,
         width: 80,
         decoration: BoxDecoration(
-          color: Color(0xFFFFB6B6),
+          color: Color(0xFFB73434),
           borderRadius: BorderRadius.circular(40),
         ),
         child: Center(
